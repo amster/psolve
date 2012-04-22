@@ -70,3 +70,33 @@ footer {
     font-size: 0.7em;
     color: #777;
 }
+.braille {
+    background: url("../../resources/images/psolve_braillemap.png") 0px 100px no-repeat;
+}
+
+.braille-A { background-position: -10px 0px; }
+.braille-B { background-position: -10px -100px; }
+.braille-C { background-position: -10px -200px; }
+.braille-D { background-position: -10px -300px; }
+.braille-E { background-position: -10px -400px; }
+.braille-F { background-position: -10px -500px; }
+.braille-G { background-position: -10px -600px; }
+.braille-H { background-position: -10px -700px; }
+.braille-I { background-position: -10px -800px; }
+.braille-J { background-position: -10px -900px; }
+.braille-K { background-position: -10px -1000px; }
+.braille-L { background-position: -10px -1100px; }
+.braille-M { background-position: -10px -1200px; }
+.braille-N { background-position: -10px -1300px; }
+.braille-O { background-position: -10px -1400px; }
+.braille-P { background-position: -10px -1500px; }
+.braille-Q { background-position: -10px -1600px; }
+.braille-R { background-position: -10px -1700px; }
+.braille-S { background-position: -10px -1800px; }
+.braille-T { background-position: -10px -1900px; }
+.braille-U { background-position: -10px -2000px; }
+.braille-v { background-position: -10px -2100px; }
+.braille-W { background-position: -10px -2200px; }
+.braille-X { background-position: -10px -2300px; }
+.braille-Y { background-position: -10px -2400px; }
+.braille-Z { background-position: -10px -2500px; }

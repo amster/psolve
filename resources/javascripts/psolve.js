@@ -245,7 +245,7 @@ $(function () {
             $tgt = $(ev.target),
             $tgtrow = $tgt.parents('tr'),
             val = $tgt.val(),
-            items, sums, indexed, allsum, sum26, morsec, sema, brailles,
+            items, sums, indexed, allsum, sum26, morsec, sema, brailles, $brailletd,
             i, curclass;
          
         // Select next row?
@@ -301,8 +301,13 @@ $(function () {
 
                     // Braille
                     brailles = itemsToBraille(items);
+                    $brailletd = $('.braille', $tgtrow);
                     if (brailles) {
-                        $('.braille', $tgtrow).text(brailles);
+                        $brailletd.text(brailles);
+                        $brailletd.addClass( 'braille-'+(brailles.replace(/\W/,'')) );
+                    } else {
+                        // Wipe out all classes.s
+                        $brailletd[0].className = 'braille';
                     }
                 } catch (e) {
                     window.console.log(e);
