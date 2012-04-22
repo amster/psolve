@@ -2,16 +2,51 @@ body {
     font-family: sans-serif;
     color: #000;
     background: #fff;
+    margin: 0;
+    padding: 15px;
 }
-
+.clear {
+    clear: both;
+}
+h1 {
+    float: left;
+    display: block;
+    margin: 0;
+    padding-right: 10px;
+}
+h2 {
+    margin: 0;
+}
+.version {
+    float: left;
+    display: block;
+}
+.new-tab {
+    float: right;
+    display: block;
+}
+.boxed {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.sidebar {
+    float: right;
+    width: 300px;
+    padding-left: 15px;
+}
+.solver {
+    float: left;
+}
 tr.model-row {
     display: none;
 }
-
+td {
+    text-align: right;
+}
 td.lineno {
     color: #ccc;
 }
-
 input.inputs {
     width: 200px;
 }
@@ -19,8 +54,14 @@ input.notes {
     background: #ffc;
 }
 .message {
+    text-align: left;
     color: #777;
 }
 .error {
     color: #f00;
+}
+.exporter {
+    width: 100%;
+    height: 5em;
+    background: #eee;
 }
