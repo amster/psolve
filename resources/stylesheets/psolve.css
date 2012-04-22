@@ -65,3 +65,8 @@ input.notes {
     height: 5em;
     background: #eee;
 }
+footer {
+    padding-top: 40px;
+    font-size: 0.7em;
+    color: #777;
+}

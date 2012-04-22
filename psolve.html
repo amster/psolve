@@ -5,81 +5,94 @@
   <link rel="stylesheet" href="resources/stylesheets/psolve.css" />
 </head>
 <body>
-  <h1>PSolve</h1>
-  <p class="version">v0.0</p>
-  <p><a href="#" class="new-tab" target="_blank">New tab/window</a></p>
-  <div class="clear"></div>
-  
-  <div class="sidebar">
-    <div class="boxed instructions">
-      <h2>What It Is</h2>
-      <p>
-        This is a puzzle-solver helper.  Typically during puzzle hunts you'll need to translate between letters, numbers, and indexes.
-        This is like a super code sheet.
-      </p>
-      <ul>
-        <li>Type values into the left side and it will try to solve out answers to the right.</li>
-        <li>Separate elements in the Input by spaces or commas.</li>
-        <li>Press Enter to go down 1 field, Tab to go to the next field in order</li>
-        <li>Some special Inputs:
-          <ul>
-            <li>Dots and dashes for Morse Code (--.- to get "Q", -.-. to get "C")</li>
-            <li>Direction pairs for semaphores (nw/sw to get "I", ne/s to get "E")</li>
-            <li>Braille as a string of "x" and "." (x.x.x. to get "L", .xxx.x to get "W")</li>
-          </ul>
-        </li>
-      </ul>
+  <header>
+    <h1>PSolve</h1>
+    <p class="version">v0.0</p>
+    <p><a href="#" class="new-tab" target="_blank">New tab/window</a></p>
+    <div class="clear"></div>
+  </header>  
+  <section>
+    <div class="sidebar">
+      <div class="boxed instructions">
+        <h2>What It Is</h2>
+        <p>
+          This is a puzzle-solver helper.  Typically during puzzle hunts you'll need to translate between letters, numbers, and indexes.
+          This is like a super code sheet.
+        </p>
+        <ul>
+          <li>Type values into the left side and it will try to solve out answers to the right.</li>
+          <li>Separate elements in the Input by spaces or commas.</li>
+          <li>Press Enter to go down 1 field, Tab to go to the next field in order</li>
+          <li>Some special Inputs:
+            <ul>
+              <li>Dots and dashes for Morse Code (--.- to get "Q", -.-. to get "C")</li>
+              <li>Direction pairs for semaphores (nw/sw to get "I", ne/s to get "E")</li>
+              <li>Braille as a string of "x" and "." (x.x.x. to get "L", .xxx.x to get "W")</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="boxed exporting">
+        <h2>Export CSV</h2>
+        <p>
+          Select, copy, and paste this in your favorite spreadsheet program:
+        </p>
+        <textarea class="exporter"></textarea>
+      </div>
     </div>
-    <div class="boxed exporting">
-      <h2>Export CSV</h2>
-      <p>
-        Select, copy, and paste this in your favorite spreadsheet program:
-      </p>
-      <textarea class="exporter"></textarea>
+    <div class="solver">
+      <table>
+        <thead>
+          <tr>
+            <th class="lineno">#</th>
+            <th class="notes">Notes</th>
+            <th class="inputs">Input</th>
+            <th class="nsum">Sum</th>
+            <th class="nsum26">Sum%26</th>
+            <th class="nindex">Indexed</th>
+            <th class="morse">Morse</th>
+            <th class="semaphore" title="Semaphore">Sema</th>
+            <th class="braille">Braille</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr class="add-more">
+            <td colspan="4">
+              <input type="button" value="Add 10 more rows" data-numrows="10">
+            </td>
+          </tr>
+          <tr class="model-row">
+            <td class="lineno"></td>
+            <td>
+              <input type="text" class="notes" />
+            </td>
+            <td>
+              <input type="text" class="inputs" />
+            </td>
+            <td class="nsum"></td>
+            <td class="nsum26"></td>
+            <td class="nindex"></td>
+            <td class="morse"></td>
+            <td class="semaphore"></td>
+            <td class="braille"></td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
-  </div>
-  <div class="solver">
-    <table>
-      <thead>
-        <tr>
-          <th class="lineno">#</th>
-          <th class="notes">Notes</th>
-          <th class="inputs">Input</th>
-          <th class="nsum">Sum</th>
-          <th class="nsum26">Sum%26</th>
-          <th class="nindex">Indexed</th>
-          <th class="morse">Morse</th>
-          <th class="semaphore" title="Semaphore">Sema</th>
-          <th class="braille">Braille</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-      <tfoot>
-        <tr class="add-more">
-          <td colspan="4">
-            <input type="button" value="Add 10 more rows" data-numrows="10">
-          </td>
-        </tr>
-        <tr class="model-row">
-          <td class="lineno"></td>
-          <td>
-            <input type="text" class="notes" />
-          </td>
-          <td>
-            <input type="text" class="inputs" />
-          </td>
-          <td class="nsum"></td>
-          <td class="nsum26"></td>
-          <td class="nindex"></td>
-          <td class="morse"></td>
-          <td class="semaphore"></td>
-          <td class="braille"></td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-  <div class="clear"></div>
+    <div class="clear"></div>
+  </section>
+  <footer>
+    <p>
+      Get and improve the code on GitHub:
+      <a href="https://github.com/amster/psolve">https://github.com/amster/psolve</a>
+    </p>
+    <p>
+      <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PSolve</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.seqmedia.com" property="cc:attributionName" rel="cc:attributionURL">Sequence Mediaworks</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+    </p>
+  </footer>
 
   <script type="text/javascript" src="resources/javascripts/jquery-1.7.min.js"></script>
   <script type="text/javascript" src="resources/javascripts/psolve.js"></script>
