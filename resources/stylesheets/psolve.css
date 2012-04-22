@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+tr.model-row {
+    display: none;
+}
+
+td.lineno {
+    color: #ccc;
+}
+
+input.inputs {
+    width: 200px;
+}
+input.notes {
+    background: #ffc;
+}
+.message {
+    color: #777;
+}
+.error {
+    color: #f00;
+}

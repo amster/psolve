@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PSolve - v0.0</title>
+  <link rel="stylesheet" href="resources/stylesheets/psolve.css" />
+</head>
+<body>
+  <h1>PSolve</h1>
+  <p class="version">v0.0</p>
+  <p><a href="#" class="new-tab" target="_blank">New tab/window</a></p>
+  
+  <h2>What It Is</h2>
+  <p>
+    This is a puzzle-solver helper.  Typically during puzzle hunts you'll need to translate between letters, numbers, and indexes.
+    This is like a super code sheet.
+  </p>
+  <ul>
+    <li>Type values into the left side and it will try to solve out answers to the right.</li>
+    <li>Separate elements in the Input by commas.</li>
+    <li>Some special Inputs:
+      <ul>
+        <li>Get single letters of Morse Code (type: --.- to get "Q", -.-. to get "C")</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <table>
+    <thead>
+      <tr>
+        <th class="lineno">#</th>
+        <th class="notes">Notes</th>
+        <th class="inputs">Input</th>
+        <th class="nsum">Sum</th>
+        <th class="nsum26">Sum%26</th>
+        <th class="nindex">Indexed</th>
+        <th class="morse">Morse</th>
+        <th class="message">Messages</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+      <tr class="add-more">
+        <td colspan="4">
+          <input type="button" value="Add 10 more rows" data-numrows="10">
+        </td>
+      </tr>
+      <tr class="model-row">
+        <td class="lineno"></td>
+        <td>
+          <input type="text" class="notes" />
+        </td>
+        <td>
+          <input type="text" class="inputs" />
+        </td>
+        <td class="nsum"></td>
+        <td class="nsum26"></td>
+        <td class="nindex"></td>
+        <td class="morse"></td>
+        <td class="message"></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script type="text/javascript" src="resources/javascripts/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="resources/javascripts/psolve.js"></script>
+</body>
+</html>
