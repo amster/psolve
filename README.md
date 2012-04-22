@@ -7,6 +7,10 @@ Installation
 ============
 Clone this repository. That's it!
 
+e.g. On a command line on your computer (with Git installed) run the following command:
+
+    git clone git://github.com/amster/psolve.git
+
 How To Use
 ==========
 Open up a web browser and load the *psolve.html* file.
