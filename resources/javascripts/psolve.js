@@ -242,15 +242,15 @@ $(function () {
 
     function processLineInput(ev) {
         var keycode = (window && window.event && window.event.keyCode) || ev.which,
-            $tgt = $(ev.target),
-            $tgtrow = $tgt.parents('tr'),
+            $tgtrow = $(ev.target).parents('tr'),
+            $tgt = $('.inputs', $tgtrow),
+            $brailletd = $('.braille', $tgtrow),
             val = $tgt.val(),
-            items, sums, indexed, allsum, sum26, morsec, sema, brailles, $brailletd,
+            items, sums, indexed, allsum, sum26, morsec, sema, brailles,
             i, curclass;
          
         // Select next row?
         if (keycode===13) {
-            console.log('Next');
             curclass = $tgt[0].className;
             $('input.'+curclass, $tgtrow.next()).focus();
         }
@@ -261,6 +261,8 @@ $(function () {
         $('.nindex', $tgtrow).text('');
         $('.morse', $tgtrow).text('');
         $('.semaphore', $tgtrow).text('');
+        $brailletd.text('');
+        $brailletd[0].className = 'braille';
         
         if (!blank(val)) {
             items = breakIntoItems(val);
@@ -301,13 +303,9 @@ $(function () {
 
                     // Braille
                     brailles = itemsToBraille(items);
-                    $brailletd = $('.braille', $tgtrow);
                     if (brailles) {
                         $brailletd.text(brailles);
                         $brailletd.addClass( 'braille-'+(brailles.replace(/\W/,'')) );
-                    } else {
-                        // Wipe out all classes.s
-                        $brailletd[0].className = 'braille';
                     }
                 } catch (e) {
                     window.console.log(e);
