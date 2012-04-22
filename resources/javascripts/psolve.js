@@ -251,7 +251,7 @@ $(function () {
          
         // Select next row?
         if (keycode===13) {
-            curclass = $tgt[0].className;
+            curclass = $(ev.target)[0].className;
             $('input.'+curclass, $tgtrow.next()).focus();
         }
          
