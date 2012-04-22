@@ -259,6 +259,7 @@ $(function () {
         $('.nsum', $tgtrow).text('');
         $('.nsum26', $tgtrow).text('');
         $('.nindex', $tgtrow).text('');
+        $('.ascii', $tgtrow).text('');
         $('.morse', $tgtrow).text('');
         $('.semaphore', $tgtrow).text('');
         $brailletd.text('');
@@ -287,6 +288,11 @@ $(function () {
                         $('.nindex', $tgtrow).text(sum26 + '->' + (sum26+1) + ': '+getIndexedChar(sum26+1));
                     } else {
                         $('.nindex', $tgtrow).text(indexed ? (indexed + getIndexedChar(indexed)) : '');
+                    }
+                    
+                    // ASCII
+                    if (allsum>=32 && allsum<=126) {
+                        $('.ascii', $tgtrow).text(String.fromCharCode(allsum));
                     }
                     
                     // Morse
